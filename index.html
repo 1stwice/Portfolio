@@ -34,13 +34,13 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="projects.html">Project Info</a></li>
-							<li><a href="generic.html">About Me</a></li>
-							<li><a href="elements.html">Support Us!</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
+							<li style="color: #6fc3dfc0;"><a href="dataEngineering.html">Data Engineering</a></li>
+							<li style="color: #b383a7c0;"><a href="blenderProjects.html">Blender</a></li>
+							<li style="color: #8ea9e8c0;"><a href="programming.html">Programming</a></li>
+							<li style="color: #e7b788c0;"><a href="music.html">Music</a></li>
+							<li style="color: #ec8d81c0;"><a href="orphanProjects.html">Misc.</a></li>
+							<li style="color: #bee88ec0;"><a href="aboutMe.html">About Me</a></li>
+							<li style="color: #87c5a4c0;"><a href="donate.html">Support Us!</a></li>
 						</ul>
 					</nav>
 
@@ -51,10 +51,10 @@
 								<span class="image">
 									<img src="images/memphis.jpg" alt="" />
 								</span>
-								<h1>Welcome To My Temple</h1>
+								<h1>Welcome</h1>
 							</header>
 							<div class="content">
-								<p>Enjoy a relaxing experience of visual stimulation</p>
+								<p>Feel free to explore my website. You might find something interesting</p>
 								<ul class="actions">
 									<li><a href="#one" class="button next scrolly">Let's Begin</a></li>
 								</ul>
@@ -142,23 +142,23 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="#">
+								<form method="post" action="email.php">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" class="inp" placeholder="First M. Last"/>
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" class="inp" placeholder="user@email.com" />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
+											<textarea name="msg" class="msg-box" placeholder="Enter message here." rows="6"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="submit" name="submit" value="Send" class="primary" /></li>
 										<li><input type="reset" value="Clear" /></li>
 									</ul>
 								</form>
