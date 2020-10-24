@@ -2921,6 +2921,16 @@ input, select, textarea {
 
 /* Spotlights */
 
+	.spotlights > section{
+		position: relative;
+		opacity: 0.7;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		box-shadow: 0 0 2px 2px rgba(36, 41, 67, 0.527) inset;
+	}
+
 	.spotlights {
 		border-top: 0 !important;
 	}
@@ -2938,7 +2948,8 @@ input, select, textarea {
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 			flex-direction: row;
-			background-color: #2e3450;
+			background-image:url('../../images/spaceMan.jpg');
+			
 		}
 
 			.spotlights > section > .image {
@@ -2947,7 +2958,7 @@ input, select, textarea {
 				border-radius: 0;
 				display: block;
 				position: relative;
-				width: 80%;
+				width: 0%;
 			}
 
 				.spotlights > section > .image img {
@@ -2985,8 +2996,8 @@ input, select, textarea {
 				-webkit-align-items: center;
 				-ms-align-items: center;
 				align-items: center;
-				padding: 2em 3em 0.1em 3em ;
-				width: 40%;
+				padding: 5em 1em 5em 1em ;
+				width: 100%;
 			}
 
 				.spotlights > section > .content > .inner {
@@ -3000,7 +3011,7 @@ input, select, textarea {
 				-webkit-flex-direction: row-reverse;
 				-ms-flex-direction: row-reverse;
 				flex-direction: row-reverse;
-				background-color: #333856;
+				background-image: url('../../images/canyon.jpg');
 			}
 
 				.spotlights > section:nth-child(2n) > .content {
@@ -3009,6 +3020,36 @@ input, select, textarea {
 					-ms-align-items: -ms-flex-end;
 					align-items: flex-end;
 				}
+
+				.spotlights > section:nth-child(3n) {
+					-moz-flex-direction: row-reverse;
+					-webkit-flex-direction: row-reverse;
+					-ms-flex-direction: row-reverse;
+					flex-direction: row-reverse;
+					background-image: url('../../images/rain.jpg');
+				}
+	
+					.spotlights > section:nth-child(3n) > .content {
+						-moz-align-items: -moz-flex-end;
+						-webkit-align-items: -webkit-flex-end;
+						-ms-align-items: -ms-flex-end;
+						align-items: flex-end;
+					}
+
+				.spotlights > section:nth-child(4n) {
+					-moz-flex-direction: row-reverse;
+					-webkit-flex-direction: row-reverse;
+					-ms-flex-direction: row-reverse;
+					flex-direction: row-reverse;
+					background-image: url('../../images/tradeCenter.jpg');
+				}
+	
+					.spotlights > section:nth-child(4n) > .content {
+						-moz-align-items: -moz-flex-end;
+						-webkit-align-items: -webkit-flex-end;
+						-ms-align-items: -ms-flex-end;
+						align-items: flex-end;
+					}
 
 		@media screen and (max-width: 1680px) {
 
