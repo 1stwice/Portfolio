@@ -1,19 +1,22 @@
 <?php
-    if(isset($_POST['submit'])){
+    if (isset($_POST['submit'])){
         $name=$_POST['name'];
-        $email=$_POST['email'];
-        $msg=$_POST['msg'];
+        $mailFrom=$_POST['mail'];
+        $message=$_POST['message'];
 
-        $to='zacktyler2014@gmail.com';
+        $mailTo="zacktyler2014@gmail.com";
         $subject='New message from your webpage';
-        $message="Name: ".$name."\n\n"."Message: ".$msg;
-        $headers="From: ".$email;
+        $headers="From: ".$mailFrom;
+        $txt="Name: ".$name.".\n\n".$message;
+        
+        mail($mailTo, $subject, $txt, $headers);
+        header("Location: index.html?mailsend");
 
-        if(mail($to, $subject, $message, $headers)){
+        /*if(mail($to, $subject, $message, $headers)){
             echo "<h1>Message Sent!</h1>";
         }
         else{
             echo "Error: Connection Not Established"
-        }
+        }*/
     }
 ?>
