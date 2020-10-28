@@ -4,6 +4,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+
 (function($) {
 
 	var	$window = $(window),
@@ -183,6 +185,29 @@
 				}
 
 		});
+
+	// Audio on E-Mail Submit
+		$("#emailForm").submit(function (e) {
+			var form = this;
+			e.preventDefault();
+			setTimeout(function () {
+				form.submit();
+			}, 1000);
+			
+		});
+	// E-Mail send
+	var message = "";
+
+	$("#sendMessage").on("click", function() {
+		message = $("#emailForm").serialize();
+		$.ajax({
+			url: "https://formspree.io/f/mgepkdzd", 
+			method: "POST",
+			data: {message: message},
+			dataType: "json"
+		});
+		return false;
+	});
 
 	// Header.
 		if ($banner.length > 0

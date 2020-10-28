@@ -76,10 +76,11 @@
 										<p>Crunching numbers 4GHz at a time</p>
 									</header>
 								</article>
-								<article>
+								<article id="containers" class="cols">
 									<span class="image">
 										
-										<img src="/images/caustics.jpg" alt="" />
+										<img height="200" class="caustics" src="/images/caustics.jpg">
+										
 																		
 									</span>
 									<header class="major">
@@ -142,11 +143,11 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form class="contact-form" action="https://formspree.io/f/mgepkdzd" method="post">
+								<form class="contact-form" action="https://formspree.io/f/mgepkdzd" method="post" id="emailForm">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="Name" id="ame" placeholder="First M. Lastname"/>
+											<input type="text" name="Name" id="name" placeholder="First M. Lastname" required/>
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
@@ -154,20 +155,39 @@
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="Message" placeholder="Message" id="message" rows="6"></textarea>
+											<textarea name="Message" placeholder="Message" id="message" rows="6" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
-										<li><input type="submit" name="" value="Send" class="primary" /></li>
+										<li><input id="sendMessage" onclick="playAudio(); messageSent();" type="submit" name="" value="Send" class="primary" /></li>
 										<li><input type="reset" value="Clear" /></li>
+										<li><h3></h3><p id="descriptionError" style="visibility: hidden; color:steelblue; text-align: center;">Sent!</p></li>
+
+										<audio id="myAudio">
+											<source src="audio/youGotMail.wav" type="audio/mp3">
+										</audio>
+										<script>
+											var x = document.getElementById("myAudio");
+											function playAudio() {
+												x.play();
+											}
+											function messageSent() {
+												descriptionError.style.visibility = "visible";
+											}
+										</script>
 									</ul>
 								</form>
+							</section>
+							<!--<section class="split">
+								<span class="image">
+									<img src="images/youGotMail.gif" alt="" />
+								</span>
 							</section>
 							<section class="split">
 								<span class="image">
 										<img src="images/youGotMail.gif" alt="" />
 								</span>
-								<!--<section>
+								<section>
 									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
 										<h3>Email</h3>
@@ -189,11 +209,11 @@
 										Nashville, TN 00000<br />
 										United States of America</span>
 									</div>
-								</section>-->
-							</section>
+								</section>
+							</section>-->
 						</div>
 					</section>
-
+					
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">

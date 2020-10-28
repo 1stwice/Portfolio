@@ -3629,9 +3629,7 @@ input, select, textarea {
 	#contact {
 		border-bottom: solid 1px rgba(212, 212, 255, 0.1);
 		overflow-x: hidden;
-		background-image:url('../../images/youGotMail.gif');
-		background-repeat: no-repeat;
-		background-size: cover;
+		
 		
 	}
 
