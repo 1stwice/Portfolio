@@ -17,13 +17,17 @@ form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+section, summary, time, mark, audio {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+	
+}
+
+	
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -2944,9 +2948,11 @@ input, select, textarea {
 		
 			iframe {
 				position: relative;
-				width: 100%;
+				width: 1142px;
+				height: 641px;
 				top: 0;
-				height: 100%;
+				
+				
 			}
 			.spotlights > section > .image {
 				background-position: center center;
